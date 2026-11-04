@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroClima - Iniciar Sesión</title>
+  
+  <!-- Enlaces a los archivos CSS y JS externos -->
+  <link rel="stylesheet" href="css/estilo_inicio_sesion.css">
+  <script src="java/script_inicio_sesion.js" defer></script>
+</head>
+<body>
+  <main class="main-layout">
+    <!-- PANEL IZQUIERDO -->
+    <aside class="hero-sidebar">
+      <img 
+        src="imagenes/campo_inicio.png" 
+        alt="" 
+        class="sidebar-bg"
+      />
+      <div class="figma-superposicion"></div>
+      <div class="sidebar-content">
+        <div>
+          <img 
+            src="imagenes/logo_blanco.png" 
+            alt="Logo AgroClima" 
+            class="sidebar-logo"
+            onerror="this.src='imagenes/logo_blanco.jpg';" 
+          />
+        </div>
+        <div class="sidebar-text-wrap">
+          <h2 class="sidebar-title">
+            Configura tu cuenta y protege tu parcela
+          </h2>
+          <p class="sidebar-desc">
+            Selecciona tu perfil, cultivos y ubicación para personalizar las alertas de heladas
+          </p>
+        </div>
+        <div style="display: none;"></div>
+      </div>
+    </aside>
+    <!-- PANEL DERECHO: FORMULARIO -->
+    <section class="form-section">
+      <div>
+        <a 
+          href="AgroClima.html"
+          class="btn-volver"
+        >
+          <span>&larr;</span>
+          <span>Volver</span>
+        </a>
+      </div>
+      
+      <div class="form-wrapper">
+        <div class="form-header">
+          <img 
+            src="imagenes/logo.jpeg" 
+            alt="Logo AgroClima" 
+            class="brand-logo-form"
+            onerror="this.src='imagenes/logo.jpg';"
+          />
+          <h2 class="brand-title">
+            AGROCLIMA
+          </h2>
+          <span class="brand-subtitle">
+            Alerta Temprana
+          </span>
+          <p class="panel-title">
+            Iniciar Sesión &mdash; Panel técnico
+          </p>
+        </div>
+        <form class="login-form" action="AgroClima_panel_de_control.html" method="GET" id="formularioIngreso">
+          <div class="input-group">
+            <label for="telefono" class="input-label">
+              Ingresa tu número de teléfono
+            </label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+              placeholder="999 999 999"
+              class="custom-input"
+            />
+          </div>
+          <div class="input-group">
+            <label for="codigo" class="input-label">
+              Ingresa el código de verificación
+            </label>
+            <input
+              type="text"
+              id="codigo"
+              name="codigo"
+              required
+              maxlength="4"
+              inputmode="numeric"
+              placeholder="- - - -"
+              class="custom-input input-codigo"
+            />
+          </div>
+          <div class="submit-wrap">
+            <button
+              type="submit"
+              class="btn-submit"
+            >
+              Ingresar
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="footer-spacer"></div>
+    </section>
+  </main>
+</body>
+</html>

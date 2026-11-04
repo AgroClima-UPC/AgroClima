@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroClima - Reportes</title>
+  
+  <!-- Enlaces a los archivos CSS y JS separados -->
+  <link rel="stylesheet" href="css/estilo_reportes.css">
+  <script src="java/script_reportes.js" defer></script>
+</head>
+<body>
+  <!-- CABECERA SUPERIOR -->
+  <header class="app-header">
+    <h1 class="header-title">
+      Panel de control - Reportes y analítica (técnicos y dirigentes)
+    </h1>
+  </header>
+  <div class="app-layout">
+    
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="app-sidebar">
+      <div class="sidebar-logo-container">
+        <img src="imagenes/logo_blanco.png" alt="AgroClima Logo" class="sidebar-logo" onerror="this.src='imagenes/logo_blanco.jpg';" />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="AgroClima_panel_de_control.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="AgroClima_monitoreo_climatico.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <span>Monitoreo climático</span>
+        </a>
+        <a href="AgroClima_gestión_alertas.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v1.341C7.67 7.165 6 9.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          <span>Gestión de alertas</span>
+        </a>
+        <a href="AgroClima_reportes.html" class="nav-link active">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Reportes</span>
+        </a>
+        <a href="AgroClima_config_de_usuario.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756.292 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>Configuración de usuario (técnico)</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="app-main">
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <p class="metric-title">Comunidades activas:</p>
+          <p class="metric-value blue">125</p>
+        </div>
+        <div class="metric-card border-red">
+          <p class="metric-title">Alertas críticas hoy:</p>
+          <p class="metric-value red">1 roja(s)</p>
+        </div>
+        <div class="metric-card border-amber">
+          <p class="metric-title">Alertas críticas mañana:</p>
+          <p class="metric-value amber">1 amarilla(s)</p>
+        </div>
+        <div class="metric-card border-emerald">
+          <p class="metric-title">Alertas críticas en esta semana:</p>
+          <p class="metric-value emerald">1 verde(s)</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-title">Avisos SMS enviados:</p>
+          <p class="metric-value blue">8,450</p>
+        </div>
+      </section>
+      
+      <section class="card-box">
+        <h2 class="section-title">Filtros y búsqueda de reportes y exportación</h2>
+        <div class="search-box">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="inputBuscar" class="search-input" placeholder="Buscar..." oninput="filtrarTabla()" />
+        </div>
+        <div class="filters-row">
+          <div class="filters-group">
+            <div class="filter-item">
+              <span class="form-label">Provincia:</span>
+              <div class="custom-dropdown" id="dropdown-provincia">
+                <div class="dropdown-selected" onclick="toggleDropdown('dropdown-provincia')">Puno</div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-provincia', 'Puno')">Puno</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-provincia', 'Carabaya')">Carabaya</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-provincia', 'Lampa')">Lampa</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-provincia', 'Azángaro')">Azángaro</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-provincia', 'Chucuito')">Chucuito</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-provincia', 'Huancané')">Huancané</div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-item">
+              <span class="form-label">Rango:</span>
+              <div class="custom-dropdown" id="dropdown-rango">
+                <div class="dropdown-selected" onclick="toggleDropdown('dropdown-rango')">Último mes</div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-rango', 'Esta semana')">Esta semana</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-rango', 'Último mes')">Último mes</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-rango', 'Último año')">Último año</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-rango', 'Todo')">Todo</div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-item">
+              <span class="form-label">Cultivo:</span>
+              <div class="custom-dropdown" id="dropdown-cultivo">
+                <div class="dropdown-selected" onclick="toggleDropdown('dropdown-cultivo')">Todos</div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-cultivo', 'Papa')">Papa</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-cultivo', 'Quinua')">Quinua</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-cultivo', 'Maíz')">Maíz</div>
+                  <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-cultivo', 'Todos')">Todos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-action" onclick="exportarReporte()">Exportar PDF / Excel</button>
+        </div>
+      </section>
+      <div class="reports-grid">
+        <section class="card-box">
+          <h2 class="section-title">Bitácora y trazabilidad de entrega de avisos SMS</h2>
+          <div class="table-container">
+            <table id="tablaBitacora">
+              <thead>
+                <tr>
+                  <th>Envío ID</th>
+                  <th>Comunidad</th>
+                  <th>Canal</th>
+                  <th>Estado</th>
+                  <th>Lecturas</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>SMS-001</strong></td>
+                  <td>Sandia</td>
+                  <td>SMS Prioritario</td>
+                  <td>Entregado (95%)</td>
+                  <td>80% (1 respuesta)</td>
+                  <td>9 Oct 2026</td>
+                </tr>
+                <tr>
+                  <td><strong>SMS-002</strong></td>
+                  <td>El Collao</td>
+                  <td>SMS Masivo</td>
+                  <td>Entregado (90%)</td>
+                  <td>75% (18 respuestas)</td>
+                  <td>8 Oct 2026</td>
+                </tr>
+                <tr>
+                  <td><strong>SMS-003</strong></td>
+                  <td>Lampa</td>
+                  <td>Notificación Push</td>
+                  <td>Fallido / Retir.</td>
+                  <td>
+                    <button class="btn-retry" onclick="reintentarEnvio('SMS-003', this)">Reintentar</button>
+                  </td>
+                  <td>7 Oct 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        
+        <section class="card-box chart-container">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <h2 class="section-title">Gráfica comparativa</h2>
+            <p class="accuracy-tag">Precisión de alertas a 48h: 85% de acierto</p>
+          </div>
+          <div class="chart-box chart-box-clickable" onclick="abrirModalGrafico()" title="Hacer clic para ampliar gráfico" style="padding: 10px; border-radius: 8px; background: #fafafa; border: 1px solid #e5e7eb;">
+            <svg viewBox="0 0 500 270" width="100%" height="auto" style="overflow: visible;">
+              <!-- Grilla Horizontal -->
+              <line x1="40" y1="30" x2="480" y2="30" stroke="#f3f4f6" stroke-width="1"/>
+              <text x="35" y="34" font-size="10" fill="#6b7280" text-anchor="end">+10 °C</text>
+              <line x1="40" y1="80" x2="480" y2="80" stroke="#f3f4f6" stroke-width="1"/>
+              <text x="35" y="84" font-size="10" fill="#6b7280" text-anchor="end">+5 °C</text>
+              <line x1="40" y1="130" x2="480" y2="130" class="linea-umbral-critico" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4"/>
+              <text x="35" y="134" font-size="10" fill="#6b7280" text-anchor="end">0 °C</text>
+              <line x1="40" y1="180" x2="480" y2="180" stroke="#f3f4f6" stroke-width="1"/>
+              <text x="35" y="184" font-size="10" fill="#6b7280" text-anchor="end">-5 °C</text>
+              <line x1="40" y1="230" x2="480" y2="230" stroke="#f3f4f6" stroke-width="1"/>
+              <text x="35" y="234" font-size="10" fill="#6b7280" text-anchor="end">-10 °C</text>
+              <!-- Eje X -->
+              <line x1="40" y1="230" x2="480" y2="230" stroke="#1f2937" stroke-width="1.5" />
+              <!-- Etiquetas Eje X (Semanas) -->
+              <text x="65" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 1</text>
+              <text x="120" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 2</text>
+              <text x="175" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 3</text>
+              <text x="230" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 4</text>
+              <text x="285" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 5</text>
+              <text x="340" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 6</text>
+              <text x="395" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 7</text>
+              <text x="450" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 8</text>
+              <text x="260" y="265" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2937">
+                Tiempo (Semanas de la temporada)
+              </text>
+              <!-- Título Eje Y -->
+              <text x="-130" y="12" transform="rotate(-90)" font-size="10" font-weight="bold" fill="#1f2937" text-anchor="middle">
+                Temperatura (°C)
+              </text>
+              <!-- Curvas de Tendencia -->
+              <path d="M 65 110 Q 120 70, 175 90 T 285 140 T 395 180 T 450 100" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3" />
+              <path d="M 65 95 L 120 60 L 175 70 L 230 90 L 285 130 L 340 185 L 395 140 L 450 50" fill="none" stroke="#059669" stroke-width="2.5" />
+              <!-- Cuadro Leyenda -->
+              <g transform="translate(300, 175)">
+                <rect x="0" y="0" width="170" height="48" fill="#ffffff" stroke="#d1d5db" rx="4"/>
+                <line x1="10" y1="12" x2="30" y2="12" stroke="#059669" stroke-width="2.5" />
+                <text x="35" y="15" font-size="8" fill="#1f2937">Pronóstico Actual (2026)</text>
+                <line x1="10" y1="24" x2="30" y2="24" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3" />
+                <text x="35" y="27" font-size="8" fill="#1f2937">Promedio Histórico (5 años)</text>
+                <line x1="10" y1="36" x2="30" y2="36" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3" />
+                <text x="35" y="39" font-size="8" fill="#1f2937">Umbral Crítico de Helada</text>
+              </g>
+            </svg>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <!-- VENTANA EMERGENTE (MODAL OVERLAY) PARA AMPLIAR EL GRÁFICO -->
+  <div id="modalGrafico" class="modal-overlay" onclick="cerrarModalAlHacerClicFuera(event)">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <h2 class="section-title">Gráfica comparativa detallada</h2>
+          <p class="accuracy-tag" style="margin-top: 4px;">Precisión de alertas a 48h: 85% de acierto</p>
+        </div>
+        <button class="modal-close-btn" onclick="cerrarModalGrafico()">&times;</button>
+      </div>
+      <div class="chart-box" style="padding: 16px; border-radius: 8px; background: #fafafa; border: 1px solid #e5e7eb;">
+        <svg viewBox="0 0 500 270" width="100%" height="auto" style="overflow: visible;">
+          <!-- Grilla Horizontal -->
+          <line x1="40" y1="30" x2="480" y2="30" stroke="#f3f4f6" stroke-width="1"/>
+          <text x="35" y="34" font-size="10" fill="#6b7280" text-anchor="end">+10 °C</text>
+          <line x1="40" y1="80" x2="480" y2="80" stroke="#f3f4f6" stroke-width="1"/>
+          <text x="35" y="84" font-size="10" fill="#6b7280" text-anchor="end">+5 °C</text>
+          <line x1="40" y1="130" x2="480" y2="130" class="linea-umbral-critico" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4"/>
+          <text x="35" y="134" font-size="10" fill="#6b7280" text-anchor="end">0 °C</text>
+          <line x1="40" y1="180" x2="480" y2="180" stroke="#f3f4f6" stroke-width="1"/>
+          <text x="35" y="184" font-size="10" fill="#6b7280" text-anchor="end">-5 °C</text>
+          <line x1="40" y1="230" x2="480" y2="230" stroke="#f3f4f6" stroke-width="1"/>
+          <text x="35" y="234" font-size="10" fill="#6b7280" text-anchor="end">-10 °C</text>
+          <!-- Eje X -->
+          <line x1="40" y1="230" x2="480" y2="230" stroke="#1f2937" stroke-width="1.5" />
+          <!-- Etiquetas Eje X (Semanas) -->
+          <text x="65" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 1</text>
+          <text x="120" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 2</text>
+          <text x="175" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 3</text>
+          <text x="230" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 4</text>
+          <text x="285" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 5</text>
+          <text x="340" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 6</text>
+          <text x="395" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 7</text>
+          <text x="450" y="246" font-size="9" fill="#1f2937" text-anchor="middle">Sem 8</text>
+          <text x="260" y="265" font-size="10" font-weight="bold" text-anchor="middle" fill="#1f2937">
+            Tiempo (Semanas de la temporada)
+          </text>
+          <!-- Título Eje Y -->
+          <text x="-130" y="12" transform="rotate(-90)" font-size="10" font-weight="bold" fill="#1f2937" text-anchor="middle">
+            Temperatura (°C)
+          </text>
+          <!-- Curvas de Tendencia -->
+          <path d="M 65 110 Q 120 70, 175 90 T 285 140 T 395 180 T 450 100" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3" />
+          <path d="M 65 95 L 120 60 L 175 70 L 230 90 L 285 130 L 340 185 L 395 140 L 450 50" fill="none" stroke="#059669" stroke-width="2.5" />
+          <!-- Cuadro Leyenda -->
+          <g transform="translate(300, 175)">
+            <rect x="0" y="0" width="170" height="48" fill="#ffffff" stroke="#d1d5db" rx="4"/>
+            <line x1="10" y1="12" x2="30" y2="12" stroke="#059669" stroke-width="2.5" />
+            <text x="35" y="15" font-size="8" fill="#1f2937">Pronóstico Actual (2026)</text>
+            <line x1="10" y1="24" x2="30" y2="24" stroke="#9ca3af" stroke-width="2" stroke-dasharray="3" />
+            <text x="35" y="27" font-size="8" fill="#1f2937">Promedio Histórico (5 años)</text>
+            <line x1="10" y1="36" x2="30" y2="36" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3" />
+            <text x="35" y="39" font-size="8" fill="#1f2937">Umbral Crítico de Helada</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

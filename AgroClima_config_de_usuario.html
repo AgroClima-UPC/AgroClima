@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroClima - Configuración de Usuario</title>
+  
+  <!-- Enlaces a los archivos CSS y JS externos -->
+  <link rel="stylesheet" href="css/estilo_config_usuario.css">
+  <script src="java/script_config_usuario.js" defer></script>
+</head>
+<body>
+  <!-- CABECERA SUPERIOR -->
+  <header class="app-header">
+    <h1 class="header-title">
+      Panel de control - Configuración de usuario (técnicos y dirigentes)
+    </h1>
+  </header>
+  <div class="app-layout">
+    
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="app-sidebar">
+      <div class="sidebar-logo-container">
+        <img src="imagenes/logo_blanco.png" alt="AgroClima Logo" class="sidebar-logo" onerror="this.src='imagenes/logo_blanco.jpg';" />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="AgroClima_panel_de_control.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="AgroClima_monitoreo_climatico.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <span>Monitoreo climático</span>
+        </a>
+        <a href="AgroClima_gestión_alertas.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v1.341C7.67 7.165 6 9.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          <span>Gestión de alertas</span>
+        </a>
+        <a href="AgroClima_reportes.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Reportes</span>
+        </a>
+        <a href="AgroClima_config_de_usuario.html" class="nav-link active">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756.292 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>Configuración de usuario (técnico)</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="app-main">
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <p class="metric-title">Comunidades activas:</p>
+          <p class="metric-value blue">125</p>
+        </div>
+        <div class="metric-card border-red">
+          <p class="metric-title">Alertas críticas hoy:</p>
+          <p class="metric-value red">1 roja(s)</p>
+        </div>
+        <div class="metric-card border-amber">
+          <p class="metric-title">Alertas críticas mañana:</p>
+          <p class="metric-value amber">1 amarilla(s)</p>
+        </div>
+        <div class="metric-card border-emerald">
+          <p class="metric-title">Alertas críticas en esta semana:</p>
+          <p class="metric-value emerald">1 verde(s)</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-title">Avisos SMS enviados:</p>
+          <p class="metric-value blue">8,450</p>
+        </div>
+      </section>
+      <section class="profile-card">
+        <div class="profile-content">
+          <div class="avatar-container">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300" alt="Andrea Huamán" />
+          </div>
+          <div class="profile-info">
+            <h2>Perfil y datos del operador técnico</h2>
+            <div class="profile-details">
+              <div class="editable-field" id="field-nombres">
+                <span class="field-label">Nombres:</span>
+                <span class="field-value" id="val-nombres">Andrea Huamán</span>
+                <button class="btn-icon" onclick="activarEdicion('nombres')" title="Editar nombres">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                </button>
+              </div>
+              <div class="editable-field" id="field-rol">
+                <span class="field-label">Rol:</span>
+                <span class="field-value" id="val-rol">Especialista en agrometeorología y desarrollo rural</span>
+                <button class="btn-icon" onclick="activarEdicion('rol')" title="Editar rol">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                </button>
+              </div>
+              <div class="editable-field" id="field-correo">
+                <span class="field-label">Correo:</span>
+                <span class="field-value" id="val-correo">andrea.huaman@agroclima.pe</span>
+                <button class="btn-icon" onclick="activarEdicion('correo')" title="Editar correo">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                </button>
+              </div>
+              <div class="editable-field" id="field-celular">
+                <span class="field-label">Celular:</span>
+                <span class="field-value" id="val-celular">999 999 999</span>
+                <button class="btn-icon" onclick="activarEdicion('celular')" title="Editar celular">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="settings-grid">
+        <div class="settings-panel">
+          <div>
+            <h3 class="section-title">Parámetros operativos y umbrales térmicos</h3>
+            <div class="form-group-list">
+              <div class="form-row">
+                <label for="umbral" class="form-label">Umbral crítico de alerta roja:</label>
+                <input 
+                  type="text" 
+                  id="umbral" 
+                  value="-1.0 °C" 
+                  class="custom-input" 
+                  onchange="guardarUmbral(this.value)"
+                />
+              </div>
+              <div class="form-row">
+                <label class="form-label">Modo de sincronización offline:</label>
+                <div class="custom-dropdown" id="dropdown-sincronizacion">
+                  <div class="dropdown-selected" onclick="toggleDropdown('dropdown-sincronizacion')">Activado</div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-sincronizacion', 'Activar')">Activar</div>
+                    <div class="dropdown-option" onclick="seleccionarOpcion('dropdown-sincronizacion', 'Desactivar')">Desactivar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="section-title">Preferencias de canales y accesibilidad visual</h3>
+            <div class="form-group-list">
+              <div class="form-row">
+                <span class="form-label">Canales activos:</span>
+                <div class="tags-container">
+                  <span class="tag-badge active" id="canal-sms" onclick="toggleCanal('canal-sms')">Mensajes SMS</span>
+                  <span class="tag-badge active" id="canal-push" onclick="toggleCanal('canal-push')">Notificaciones Push</span>
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="form-label">Alto contraste:</label>
+                <div class="custom-dropdown" id="dropdown-contraste">
+                  <div class="dropdown-selected" id="val-contraste" onclick="toggleDropdown('dropdown-contraste')">Desactivado</div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-option" onclick="cambiarAltoContraste('Activar')">Activar</div>
+                    <div class="dropdown-option" onclick="cambiarAltoContraste('Desactivar')">Desactivar</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <label class="form-label">Tamaño de letra:</label>
+                <div class="custom-dropdown" id="dropdown-letra">
+                  <div class="dropdown-selected" id="val-letra" onclick="toggleDropdown('dropdown-letra')">Normal</div>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-option" onclick="cambiarTamanioLetra('Pequeña')">Pequeña</div>
+                    <div class="dropdown-option" onclick="cambiarTamanioLetra('Normal')">Normal</div>
+                    <div class="dropdown-option" onclick="cambiarTamanioLetra('Grande')">Grande</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-panel">
+          <div>
+            <h3 class="section-title">Gestión de Padrón Agrícola</h3>
+            <button onclick="importarPadron()" class="btn-action">Importar lista de agricultores (.CSV / Excel)</button>
+            <input type="file" id="archivoPadron" style="display: none;" accept=".csv, .xlsx, .xls" onchange="procesarArchivo(event)" />
+          </div>
+          <div style="border-top: 1px solid #e5e7eb; padding-top: 1rem;">
+            <h3 class="section-title">Gestión de Fichas Técnicas de Mitigación</h3>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <button onclick="alert('Abriendo creador de guía...')" class="btn-action" style="width: 100%;">+ Crear nueva guía de mitigación</button>
+              <button onclick="alert('Abriendo editor de protocolos...')" class="btn-action" style="width: 100%;">Editar protocolo post-helada</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

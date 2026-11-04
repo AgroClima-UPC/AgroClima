@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AgroClima - Panel principal</title>
+
+<!-- Enlaces a los archivos CSS y JS separados -->
+<link rel="stylesheet" href="css/estilo_panel_control.css">
+<script src="java/script_panel_control.js" defer></script>
+</head>
+<body>
+<!-- CABECERA SUPERIOR -->
+<header class="app-header">
+  <h1 class="header-title">
+    Panel de control - Panel principal (técnicos y dirigentes)
+  </h1>
+</header>
+<div class="app-layout">
+  <!-- BARRA LATERAL (SIDEBAR) -->
+  <aside class="app-sidebar">
+    <div class="sidebar-logo-container">
+      <img src="imagenes/logo_blanco.png" alt="AgroClima Logo" class="sidebar-logo" onerror="this.src='imagenes/logo_blanco.jpg';" />
+    </div>
+    <nav class="sidebar-nav">
+      <a href="AgroClima_panel_de_control.html" class="nav-link active">
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="AgroClima_monitoreo_climatico.html" class="nav-link">
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <span>Monitoreo climático</span>
+      </a>
+      <a href="AgroClima_gestión_alertas.html" class="nav-link">
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v1.341C7.67 7.165 6 9.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        <span>Gestión de alertas</span>
+      </a>
+      <a href="AgroClima_reportes.html" class="nav-link">
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <span>Reportes</span>
+      </a>
+      <a href="AgroClima_config_de_usuario.html" class="nav-link">
+        <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756.292 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span style="line-height: 1.2;">Configuración de usuario (técnico)</span>
+      </a>
+    </nav>
+  </aside>
+  <main class="app-main">
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <p class="metric-title">Comunidades activas:</p>
+        <p class="metric-value blue">125</p>
+      </div>
+      <div class="metric-card border-red">
+        <p class="metric-title">Alertas críticas hoy:</p>
+        <p class="metric-value red">1 roja(s)</p>
+      </div>
+      <div class="metric-card border-amber">
+        <p class="metric-title">Alertas críticas mañana:</p>
+        <p class="metric-value amber">1 amarilla(s)</p>
+      </div>
+      <div class="metric-card border-emerald">
+        <p class="metric-title">Alertas críticas en esta semana:</p>
+        <p class="metric-value emerald">1 verde(s)</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-title">Avisos SMS enviados:</p>
+        <p class="metric-value blue">8,450</p>
+      </div>
+    </section>
+    <div class="content-grid">
+      <div class="left-column">
+        <section class="card-box alert-box">
+          <div class="alert-header">
+            <span>Alerta(s) prioritaria(s) del día</span>
+            <span style="color: #b91c1c; font-weight: 500; font-size: var(--font-xs);">Última sync con SENAMHI: hace 5 min</span>
+          </div>
+          <div class="alert-subcontent">
+            <p style="font-size: var(--font-md); font-weight: 600; color: #b91c1c;">
+              Riesgo Alto de Helada en Sandia (Provincia de Puno) - Cultivo afectado: Papa en Floración
+            </p>
+            <p style="font-size: var(--font-sm); font-weight: 600; color: #b91c1c;">10 Oct 2026</p>
+            <div>
+              <button onclick="emitirAvisoUrgente()" class="btn-alert">
+                Ver detalle y emitir aviso urgente
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="card-box">
+          <h2 class="simulation-title">Estado de la red y pasarela SMS</h2>
+          <div class="status-grid">
+            <div class="status-item">
+              <div class="status-item-header">
+                <span>Conectividad de Pasarela SMS: 95%</span>
+                <span class="stable">Estable</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+            <div class="status-item">
+              <div class="status-item-header">
+                <span>Sensores Operativos: 110/125</span>
+                <span class="stable">88%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="status-item">
+            <div class="status-item-header">
+              <span>Tasa de Lectura / Confirmación: 6,590/8,450</span>
+              <span class="stable">78%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+        </section>
+        <section class="card-box">
+          <h2 class="simulation-title">Bitácora de actividad reciente</h2>
+          <div class="log-box">
+            <p><span>[08:10 am]</span> Difusión masiva automática ejecutada para Zona Norte (Puno).</p>
+            <p><span>[Ayer]</span> Actualización de umbrales térmicos en sector Lampa.</p>
+            <p><span>[Ayer]</span> Registro de nuevo dirigente comunal en El Collao.</p>
+          </div>
+        </section>
+      </div>
+      <aside class="right-column">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="simulation-header-row">
+            <div>
+              <h2 class="simulation-title">Simulación</h2>
+              <p class="simulation-subtitle">Caída de temperatura (°C)</p>
+            </div>
+            <span id="badgeTemperatura" class="slider-value-badge">0 °C</span>
+          </div>
+          <input type="range" id="sliderTemperatura" min="-10" max="10" value="0" class="custom-slider" oninput="actualizarSimulacion(this.value)">
+          <div class="slider-labels">
+            <span>-10°C</span>
+            <span>10°C</span>
+          </div>
+          <div class="simulation-legend">
+            <div class="legend-item">
+              <span style="display: inline-block; width: 16px; height: 3px; background-color: #14532d;"></span>
+              <span>Temperatura actual</span>
+            </div>
+            <div class="legend-item">
+              <span style="display: inline-block; width: 16px; height: 2px; border-top: 2px dashed #dc2626;"></span>
+              <span>Umbral crítico</span>
+            </div>
+          </div>
+          <div class="critical-window">
+            Ventana crítica estimada: 02:00 AM a 05:30 AM (Bajo 0°C)
+          </div>
+          <div class="chart-box chart-box-clickable" onclick="abrirModalGrafico()" title="Hacer clic para ampliar gráfico">
+            <svg style="width: 100%; height: 190px; overflow: visible;" viewBox="0 0 400 170">
+              <line x1="50" y1="20" x2="375" y2="20" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="50" x2="375" y2="50" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="110" x2="375" y2="110" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="140" x2="375" y2="140" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="80" x2="375" y2="80" class="linea-umbral-critico" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <line x1="50" y1="140" x2="50" y2="15" stroke="#000" stroke-width="2"/>
+              <line x1="50" y1="140" x2="375" y2="140" stroke="#000" stroke-width="2"/>
+              <text x="14" y="80" font-size="10" font-weight="bold" fill="#000" text-anchor="middle" transform="rotate(-90, 14, 80)">Temperatura (°C)</text>
+              <text x="45" y="23" font-size="9" fill="#000" text-anchor="end">+10 °C</text>
+              <text x="45" y="53" font-size="9" fill="#000" text-anchor="end">+5 °C</text>
+              <text x="45" y="83" font-size="9" fill="#000" text-anchor="end">0 °C</text>
+              <text x="45" y="113" font-size="9" fill="#000" text-anchor="end">-5 °C</text>
+              <text x="45" y="143" font-size="9" fill="#000" text-anchor="end">-10 °C</text>
+              <text x="50" y="155" font-size="9" fill="#000" text-anchor="middle">0</text>
+              <text x="96" y="155" font-size="9" fill="#000" text-anchor="middle">6</text>
+              <text x="142" y="155" font-size="9" fill="#000" text-anchor="middle">12</text>
+              <text x="188" y="155" font-size="9" fill="#000" text-anchor="middle">18</text>
+              <text x="235" y="155" font-size="9" fill="#000" text-anchor="middle">24</text>
+              <text x="327" y="155" font-size="9" fill="#000" text-anchor="middle">36</text>
+              <text x="375" y="155" font-size="9" fill="#000" text-anchor="middle">48</text>
+              <path class="curvaGraficoClase" d="" fill="none" stroke="#14532d" stroke-width="3"/>
+            </svg>
+            <div class="chart-footer-title" style="margin-top: 8px;">
+              Tiempo (siguientes horas)
+            </div>
+          </div>
+        </div>
+        <button onclick="validarPronostico()" class="btn-primary">
+          Validar pronóstico y alertar
+        </button>
+      </aside>
+    </div>
+  </main>
+</div>
+<!-- VENTANA EMERGENTE (MODAL OVERLAY FIDEDIGNO A FIGMA) -->
+<div id="modalGrafico" class="modal-overlay" onclick="cerrarModalAlHacerClicFuera(event)">
+  <div class="modal-container-figma">
+    <!-- COLUMNA IZQUIERDA: CONTROLES DE LA SIMULACIÓN -->
+    <div class="modal-left-controls">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <h2 class="simulation-title">Simulación</h2>
+        <div>
+          <p class="simulation-subtitle" style="margin-bottom: 8px;">Simulación de caída de temperatura (°C)</p>
+          <input type="range" id="modalSliderTemperatura" min="-10" max="10" value="0" class="custom-slider" oninput="actualizarSimulacion(this.value)">
+          <div class="slider-labels">
+            <span>-10°C</span>
+            <span>10°C</span>
+          </div>
+        </div>
+      </div>
+      <button onclick="validarPronostico()" class="btn-primary" style="width: 100%;">Validar pronóstico y alertar</button>
+    </div>
+    <!-- COLUMNA DERECHA: GRÁFICO EXPANDIDO -->
+    <div class="modal-right-chart">
+      <div style="text-align: center; font-size: 11px; font-weight: 600; color: #1f2937; margin-bottom: 6px;">
+        Ventana crítica estimada: <span style="font-weight: 700;">02:00 AM a 05:30 AM (Bajo 0 °C)</span>
+      </div>
+      <div class="chart-box" style="padding: 12px; border-radius: 8px; background: #ffffff; border: 1px solid #e5e7eb;">
+        <svg style="width: 100%; height: 250px; overflow: visible;" viewBox="0 0 400 170">
+          <line x1="50" y1="20" x2="375" y2="20" stroke="#f3f4f6" stroke-width="1"/>
+          <line x1="50" y1="50" x2="375" y2="50" stroke="#f3f4f6" stroke-width="1"/>
+          <line x1="50" y1="110" x2="375" y2="110" stroke="#f3f4f6" stroke-width="1"/>
+          <line x1="50" y1="140" x2="375" y2="140" stroke="#f3f4f6" stroke-width="1"/>
+          <line x1="50" y1="80" x2="375" y2="80" class="linea-umbral-critico" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <line x1="50" y1="140" x2="50" y2="15" stroke="#000" stroke-width="2"/>
+          <line x1="50" y1="140" x2="375" y2="140" stroke="#000" stroke-width="2"/>
+          <text x="14" y="80" font-size="10" font-weight="bold" fill="#000" text-anchor="middle" transform="rotate(-90, 14, 80)">Temperatura (°C)</text>
+          <text x="45" y="23" font-size="9" fill="#000" text-anchor="end">+10 °C</text>
+          <text x="45" y="53" font-size="9" fill="#000" text-anchor="end">+5 °C</text>
+          <text x="45" y="83" font-size="9" fill="#000" text-anchor="end">0 °C</text>
+          <text x="45" y="113" font-size="9" fill="#000" text-anchor="end">-5 °C</text>
+          <text x="45" y="143" font-size="9" fill="#000" text-anchor="end">-10 °C</text>
+          <text x="50" y="155" font-size="9" fill="#000" text-anchor="middle">0</text>
+          <text x="96" y="155" font-size="9" fill="#000" text-anchor="middle">6</text>
+          <text x="142" y="155" font-size="9" fill="#000" text-anchor="middle">12</text>
+          <text x="188" y="155" font-size="9" fill="#000" text-anchor="middle">18</text>
+          <text x="235" y="155" font-size="9" fill="#000" text-anchor="middle">24</text>
+          <text x="327" y="155" font-size="9" fill="#000" text-anchor="middle">36</text>
+          <text x="375" y="155" font-size="9" fill="#000" text-anchor="middle">48</text>
+          <path class="curvaGraficoClase" d="" fill="none" stroke="#14532d" stroke-width="3"/>
+        </svg>
+        <div class="chart-footer-title" style="margin-top: 12px;">
+          Tiempo (siguientes horas)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

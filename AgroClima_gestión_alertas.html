@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroClima - Gestión de Alertas</title>
+  
+  <!-- Enlaces a los archivos CSS y JS externos -->
+  <link rel="stylesheet" href="css/estilo_gestión_alertas.css">
+  <script src="java/script_gestión_alertas.js" defer></script>
+</head>
+<body>
+  <!-- CABECERA SUPERIOR -->
+  <header class="app-header">
+    <h1 class="header-title">
+      Panel de control - Gestión de Alertas (técnicos y dirigentes)
+    </h1>
+  </header>
+  <div class="app-layout">
+    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="app-sidebar">
+      <div class="sidebar-logo-container">
+        <img 
+          src="imagenes/logo_blanco.png" 
+          alt="AgroClima Logo" 
+          class="sidebar-logo"
+          onerror="this.src='imagenes/logo_blanco.jpg';" 
+        />
+      </div>
+      <nav class="sidebar-nav">
+        <a href="AgroClima_panel_de_control.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="AgroClima_monitoreo_climatico.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <span>Monitoreo climático</span>
+        </a>
+        <a href="AgroClima_gestión_alertas.html" class="nav-link active">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v1.341C7.67 7.165 6 9.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          <span>Gestión de alertas</span>
+        </a>
+        <a href="AgroClima_reportes.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>Reportes</span>
+        </a>
+        <a href="AgroClima_config_de_usuario.html" class="nav-link">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756.292 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span style="line-height: 1.2;">Configuración de usuario (técnico)</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="app-main">
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <p class="metric-title">Comunidades activas:</p>
+          <p class="metric-value blue">125</p>
+        </div>
+        <div class="metric-card border-red">
+          <p class="metric-title">Alertas críticas hoy:</p>
+          <p class="metric-value red">1 roja(s)</p>
+        </div>
+        <div class="metric-card border-amber">
+          <p class="metric-title">Alertas críticas mañana:</p>
+          <p class="metric-value amber">1 amarilla(s)</p>
+        </div>
+        <div class="metric-card border-emerald">
+          <p class="metric-title">Alertas críticas en esta semana:</p>
+          <p class="metric-value emerald">1 verde(s)</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-title">Avisos SMS enviados:</p>
+          <p class="metric-value blue">8,450</p>
+        </div>
+      </section>
+      <section class="section-card">
+        <h2 class="section-title">Filtros y búsqueda de alertas</h2>
+        <div class="filters-container">
+          <div class="search-bar-wrap">
+            <svg class="search-icon-pos" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" class="search-input-custom" placeholder="Buscar..." />
+          </div>
+          <div class="filter-row-controls">
+            <div class="filter-group-inline">
+              <span class="filter-label-text">Provincia:</span>
+              <select class="custom-select">
+                <option value="Puno">Puno</option>
+                <option value="Carabaya">Carabaya</option>
+                <option value="Lampa">Lampa</option>
+                <option value="Azangaro">Azangaro</option>
+              </select>
+            </div>
+            <div class="filter-group-inline">
+              <span class="filter-label-text">Riesgo:</span>
+              <select class="custom-select">
+                <option value="Todos">Todos</option>
+                <option value="Alto">Alto</option>
+                <option value="Medio">Medio</option>
+                <option value="Bajo">Bajo</option>
+              </select>
+            </div>
+            <div class="filter-group-inline">
+              <span class="filter-label-text">Fecha:</span>
+              <select class="custom-select">
+                <option value="Esta semana">Esta semana</option>
+                <option value="Hoy">Hoy</option>
+                <option value="Este mes">Este mes</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-card">
+        <h2 class="section-title">Listado detallado de alertas registradas</h2>
+        <div class="table-responsive-wrap">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Alerta ID</th>
+                <th>Ubicación</th>
+                <th>Nivel de riesgo</th>
+                <th>Fecha estimada</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ALRT-001</td>
+                <td>Sandia</td>
+                <td><span class="risk-txt-alto">Alto</span></td>
+                <td>10 Oct 2026</td>
+                <td><button onclick="abrirModal()" class="btn-difundir">Difundir</button></td>
+              </tr>
+              <tr>
+                <td>ALRT-002</td>
+                <td>El Collao</td>
+                <td><span class="risk-txt-medio">Medio</span></td>
+                <td>11 Oct 2026</td>
+                <td><button onclick="abrirModal()" class="btn-difundir">Difundir</button></td>
+              </tr>
+              <tr>
+                <td>ALRT-003</td>
+                <td>Lampa</td>
+                <td><span class="risk-txt-bajo">Bajo</span></td>
+                <td>13 Oct 2026</td>
+                <td><button onclick="abrirModal()" class="btn-difundir">Difundir</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="section-card">
+        <div class="console-header-flex">
+          <h2 class="section-title">Consola de pasarela SMS y difusión masiva</h2>
+          <span class="console-status-badge">Estado: Pasarela Activa (95% conectividad)</span>
+        </div>
+        <div class="template-control-row">
+          <span>Cargar Plantilla:</span>
+          <select id="selectorPlantilla" class="template-select-wide" onchange="cambiarPlantilla(this.value)">
+            <option value="1">Helada Severa - Riego por Aspersión</option>
+            <option value="2">Helada Moderada - Aporque Alto y Cobertura de Suelo</option>
+            <option value="3">Bajas Temperaturas - Uso de Mantas Térmicas</option>
+          </select>
+        </div>
+        <textarea id="textoMensajeSMS" class="sms-textarea">AGROCLIMA: Helada en Sandia el 10/10 entre 2AM-5AM. Aplique riego por aspersion o aporque alto en sus cultivos de papa.</textarea>
+        <div class="sms-footer-info">
+          <span id="contadorCaracteres">Mensaje (119/160 caracteres) — Alcance estimado: 1,240 agricultores empadronados en Sandia</span>
+          <button onclick="abrirModal()" class="btn-ejecutar-difusion">Ejecutar difusión masiva</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal-overlay" id="modalConfirmacion">
+    <div class="modal-box">
+      <p class="modal-title-text">¿Desea confirmar el envio del mensaje?</p>
+      <div class="modal-buttons-row">
+        <button onclick="cerrarModal()" class="btn-modal-cancel">Cancelar</button>
+        <button onclick="confirmarEnvio()" class="btn-modal-confirm">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
