@@ -116,11 +116,22 @@ function activarEdicion(campoId) {
 }
 
 function guardarEdicion(campoId) {
-  const nuevoTexto = document.getElementById(`input-${campoId}`).value.trim();
+  const inputEl = document.getElementById(`input-${campoId}`);
+  const nuevoTexto = inputEl.value.trim();
   if (!nuevoTexto) return;
+
   if (campoId === 'celular') {
-    localStorage.setItem('agroclima_telefono', nuevoTexto);
+    let limpio = nuevoTexto.replace(/\D/g, '');
+    if (limpio.length !== 9) {
+      alert('El número de celular debe tener exactamente 9 dígitos.');
+      inputEl.focus();
+      return;
+    }
+    localStorage.setItem('agroclima_telefono', limpio);
+    restaurarCampoHTML(campoId, formatearTelefono(limpio));
+    return;
   }
+
   if (campoId === 'nombres') {
     localStorage.setItem('agroclima_nombres', nuevoTexto);
   }
